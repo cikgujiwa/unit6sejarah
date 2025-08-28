@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 6: Perayaan di Malaysia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .modal-backdrop {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-center text-teal-600">Unit 6: Perayaan di Malaysia</h1>
+            <p class="text-center text-gray-600 mt-2">Mari kenali kepelbagaian perayaan yang menyatukan kita sebagai rakyat Malaysia.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+
+        <!-- Perayaan Utama Section -->
+        <section id="perayaan-utama">
+            <h2 class="text-2xl font-bold mb-6 text-center">Perayaan Utama di Malaysia</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Card Perayaan -->
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('aidilfitri')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-green-100 rounded-full mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Hari Raya Aidilfitri</h3>
+                        <p class="text-center text-gray-500 text-sm">Keagamaan</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('tahunbaharucina')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-red-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Tahun Baharu Cina</h3>
+                        <p class="text-center text-gray-500 text-sm">Meraikan Tahun Baharu</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('deepavali')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-yellow-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Deepavali</h3>
+                        <p class="text-center text-gray-500 text-sm">Kebaikan Mengatasi Kejahatan</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('kaamatan')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-green-100 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7.014a8.003 8.003 0 0110.014 10.014C20.5 15 18 15 18 17c1 2 2.657 2.657 2.657 2.657z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Pesta Kaamatan</h3>
+                        <p class="text-center text-gray-500 text-sm">Mensyukuri Hasil Tanaman</p>
+                    </div>
+                </div>
+                 <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('gawai')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-lime-100 rounded-full mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.737 11l-.54-1.559A9.015 9.015 0 0112 5c1.85 0 3.56.556 4.803 1.441l-.54 1.559" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Hari Gawai</h3>
+                        <p class="text-center text-gray-500 text-sm">Mensyukuri Hasil Tanaman</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('krismas')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-blue-100 rounded-full mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Krismas</h3>
+                        <p class="text-center text-gray-500 text-sm">Mengingati Tokoh Agama</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('thaipusam')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-orange-100 rounded-full mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Thaipusam</h3>
+                        <p class="text-center text-gray-500 text-sm">Keagamaan & Penebusan Nazar</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('vesak')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-purple-100 rounded-full mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Hari Wesak</h3>
+                        <p class="text-center text-gray-500 text-sm">Mengingati Tokoh Agama</p>
+                    </div>
+                </div>
+                 <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('vaisakhi')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-sky-100 rounded-full mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Vaisakhi</h3>
+                        <p class="text-center text-gray-500 text-sm">Tahun Baharu & Keagamaan Sikh</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg overflow-hidden" onclick="showModal('orangasli')">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto bg-amber-100 rounded-full mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-2">Perayaan Orang Asli</h3>
+                        <p class="text-center text-gray-500 text-sm">Kesyukuran & Adat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kepentingan Menyambut Perayaan Section -->
+        <section id="kepentingan-perayaan" class="mt-16 bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-center">Kepentingan Menyambut Perayaan</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-teal-100 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    </div>
+                    <h3 class="font-semibold">Mengukuhkan Perpaduan Kaum</h3>
+                    <p class="text-gray-600 text-sm">Amalan ziarah-menziarahi dan rumah terbuka mengeratkan perpaduan dalam kalangan masyarakat.</p>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-purple-100 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h3 class="font-semibold">Mengeratkan Hubungan</h3>
+                    <p class="text-gray-600 text-sm">Memberi peluang untuk mengeratkan hubungan kekeluargaan serta persahabatan.</p>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-yellow-100 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                    <h3 class="font-semibold">Mengenali Budaya</h3>
+                    <p class="text-gray-600 text-sm">Dapat mengenali dan memahami keunikan adat resam serta warisan budaya pelbagai kaum.</p>
+                </div>
+                <div class="p-4">
+                    <div class="flex items-center justify-center h-16 w-16 mx-auto bg-green-100 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-2.714 5.428a2 2 0 001.736 2.97h4.618a2 2 0 002-2z" /></svg>
+                    </div>
+                    <h3 class="font-semibold">Menunjukkan Rasa Syukur</h3>
+                    <p class="text-gray-600 text-sm">Menjadi lambang kesyukuran atas nikmat dan rezeki yang diterima, seperti hasil tuaian.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amalan Unik Perayaan Section -->
+        <section id="amalan-unik" class="mt-16">
+            <h2 class="text-2xl font-bold mb-8 text-center">Amalan Unik Perayaan</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <img src="https://placehold.co/100x100/34D399/FFFFFF?text=Wang" alt="Duit Raya dan Angpau" class="mx-auto mb-3 rounded-full w-24 h-24 object-cover">
+                    <h4 class="font-semibold">Duit Raya & Angpau</h4>
+                    <p class="text-sm text-gray-500">Pemberian wang kepada kanak-kanak dan orang muda.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <img src="https://placehold.co/100x100/FBBF24/FFFFFF?text=Seni" alt="Kolam" class="mx-auto mb-3 rounded-full w-24 h-24 object-cover">
+                    <h4 class="font-semibold">Kolam</h4>
+                    <p class="text-sm text-gray-500">Hiasan lantai daripada beras berwarna semasa Deepavali.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <img src="https://placehold.co/100x100/EF4444/FFFFFF?text=Singa" alt="Tarian Singa" class="mx-auto mb-3 rounded-full w-24 h-24 object-cover">
+                    <h4 class="font-semibold">Tarian Singa</h4>
+                    <p class="text-sm text-gray-500">Dipercayai membawa tuah semasa Tahun Baharu Cina.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow text-center">
+                    <img src="https://placehold.co/100x100/F97316/FFFFFF?text=Nazar" alt="Kavadi" class="mx-auto mb-3 rounded-full w-24 h-24 object-cover">
+                    <h4 class="font-semibold">Kavadi</h4>
+                    <p class="text-sm text-gray-500">Struktur dihias yang dibawa untuk menunaikan nazar Thaipusam.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perayaan Dahulu dan Sekarang Section -->
+        <section id="perbandingan-zaman" class="mt-16">
+            <h2 class="text-2xl font-bold mb-6 text-center">Perayaan: Dahulu dan Sekarang</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-center text-gray-700">Zaman Dahulu</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Kad ucapan dihantar melalui pos atau serahan tangan.</li>
+                        <li>Juadah disediakan secara gotong-royong menggunakan kaedah tradisional.</li>
+                        <li>Tradisi seperti membuat 'kolam' menggunakan tepung beras.</li>
+                        <li>Kunjungan dari rumah ke rumah menjadi aktiviti utama.</li>
+                        <li>Upacara ritual menjadi sebahagian penting sambutan seperti Hari Gawai.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-center text-teal-600">Zaman Sekarang</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>Ucapan dihantar melalui media elektronik dan media sosial.</li>
+                        <li>Peralatan moden digunakan untuk penyediaan kuih-muih.</li>
+                        <li>'Kolam' dihasilkan daripada beras atau hampas kelapa berwarna-warni.</li>
+                        <li>Swafoto bersama keluarga dan dimuat naik ke media sosial.</li>
+                        <li>Sambutan lebih meluas tanpa mengira bidang pekerjaan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tahukah Anda Section -->
+        <section id="tahukah-anda" class="mt-12">
+            <div class="bg-sky-100 border-l-4 border-sky-500 text-sky-700 p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+                <h3 class="text-xl font-bold mb-2">Tahukah Anda?</h3>
+                <p>Rumah terbuka ialah rumah yang dapat dikunjungi oleh semua orang, biasanya pada hari-hari perayaan. Kerajaan Malaysia telah memutuskan sebanyak enam perayaan utama yang dikenali sebagai Rumah Terbuka Malaysia. Enam perayaan tersebut ialah Hari Raya Aidilfitri, Tahun Baharu Cina, Deepavali, Hari Gawai, Pesta Kaamatan dan Krismas.</p>
+            </div>
+        </section>
+
+        <!-- Kuiz Section -->
+        <section id="kuiz" class="mt-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">Jom Uji Minda!</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <div id="quiz-container"></div>
+                <button id="submit-quiz" class="mt-6 w-full bg-teal-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-600 transition duration-300">Hantar Jawapan</button>
+                <div id="quiz-results" class="mt-4 text-center font-semibold"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>Memahami dan menghormati perayaan kaum lain akan melahirkan masyarakat yang bersatu padu dan harmoni.</p>
+            <p class="text-sm text-gray-400 mt-2">&copy; 2024 Nota Interaktif Sejarah</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none modal-backdrop">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-lg overflow-hidden modal-content transform scale-95 opacity-0">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" class="text-2xl font-bold"></h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
+            </div>
+            <div id="modal-body" class="p-6 max-h-[60vh] overflow-y-auto">
+                <!-- Content will be injected by JS -->
+            </div>
+            <div class="p-4 bg-gray-50 border-t text-right">
+                <button onclick="closeModal()" class="bg-gray-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">Tutup</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Data Perayaan
+        const perayaanData = {
+            aidilfitri: {
+                title: 'Hari Raya Aidilfitri',
+                content: `<p><strong>Tujuan Sambutan:</strong> Keagamaan</p><p class="mt-2">Disambut oleh umat Islam bagi meraikan kemenangan setelah sebulan berpuasa di bulan Ramadan. Ia juga dikenali sebagai Hari Raya Puasa.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Menziarahi sanak saudara dan rakan taulan.</li><li>Amalan 'rumah terbuka' di mana tetamu dialu-alukan.</li><li>Memakai pakaian baharu yang cantik.</li><li>Menikmati juadah tradisional seperti ketupat, rendang, dan lemang.</li><li>Memberi 'duit raya' kepada kanak-kanak.</li></ul>`
+            },
+            tahunbaharucina: {
+                title: 'Tahun Baharu Cina',
+                content: `<p><strong>Tujuan Sambutan:</strong> Meraikan Tahun Baharu</p><p class="mt-2">Merupakan perayaan terpenting bagi masyarakat Cina, menandakan permulaan tahun baharu dalam kalendar lunar.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>'Makan besar' bersama keluarga pada malam sebelum tahun baharu.</li><li>Memberi 'angpau' (sampul merah berisi wang).</li><li>Menghias rumah dengan tanglung dan hiasan berwarna merah.</li><li>Menonton tarian singa dan naga.</li><li>Mercun dan bunga api untuk menghalau nasib malang.</li></ul>`
+            },
+            deepavali: {
+                title: 'Deepavali',
+                content: `<p><strong>Tujuan Sambutan:</strong> Kebaikan Mengatasi Kejahatan</p><p class="mt-2">Dikenali sebagai 'Pesta Cahaya', disambut oleh penganut agama Hindu. Ia melambangkan kemenangan cahaya (kebaikan) ke atas kegelapan (kejahatan).</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Memasang pelita (lampu minyak) dan lampu hiasan di rumah.</li><li>Membuat 'kolam', hiasan lantai berwarna-warni yang diperbuat daripada beras.</li><li>Menziarahi kuil untuk bersembahyang.</li><li>Mengadakan rumah terbuka dan berkongsi manisan.</li></ul>`
+            },
+            kaamatan: {
+                title: 'Pesta Kaamatan',
+                content: `<p><strong>Tujuan Sambutan:</strong> Mensyukuri Hasil Tanaman</p><p class="mt-2">Disambut oleh masyarakat Kadazandusun di Sabah sebagai tanda kesyukuran atas hasil tuaian padi yang melimpah.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Upacara kesyukuran yang diketuai oleh Bobohizan (ketua paderi).</li><li>Pertandingan ratu cantik 'Unduk Ngadau'.</li><li>Persembahan tarian tradisional seperti Sumazau.</li><li>Sukan rakyat seperti gusti lengan.</li><li>Menikmati makanan dan minuman tradisional seperti tapai.</li></ul>`
+            },
+            gawai: {
+                title: 'Hari Gawai',
+                content: `<p><strong>Tujuan Sambutan:</strong> Mensyukuri Hasil Tanaman</p><p class="mt-2">Disambut oleh masyarakat Dayak di Sarawak, terutamanya kaum Iban dan Bidayuh. Ia menandakan berakhirnya musim menuai padi.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Upacara 'miring' untuk berterima kasih kepada dewa.</li><li>Perarakan 'Ngalu Petara' (menyambut dewa).</li><li>Minum 'tuak' (arak beras) sebagai tanda perayaan.</li><li>Tarian 'Ngajat' dipersembahkan.</li><li>Mengunjungi rumah panjang rakan-rakan dan keluarga.</li></ul>`
+            },
+            krismas: {
+                title: 'Krismas',
+                content: `<p><strong>Tujuan Sambutan:</strong> Mengingati Tokoh Agama</p><p class="mt-2">Disambut oleh penganut agama Kristian pada 25 Disember setiap tahun untuk memperingati kelahiran Jesus Christ.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Menghias pokok Krismas.</li><li>Menghadiri upacara keagamaan di gereja.</li><li>Bertukar-tukar hadiah.</li><li>Menyanyikan lagu-lagu karol Krismas.</li><li>Makan malam istimewa bersama keluarga.</li></ul>`
+            },
+            thaipusam: {
+                title: 'Thaipusam',
+                content: `<p><strong>Tujuan Sambutan:</strong> Keagamaan & Penebusan Nazar</p><p class="mt-2">Perayaan keagamaan yang disambut oleh penganut agama Hindu bagi menghormati dewa Murugan. Ia adalah hari untuk menunaikan nazar dan menebus dosa.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Berarak membawa 'kavadi' yang dihias indah.</li><li>Membawa 'paal kudam' (belanga berisi susu) sebagai persembahan.</li><li>Mencukur rambut sebagai tanda melepaskan ego.</li><li>Berpuasa dan berdoa sebelum hari perayaan.</li></ul>`
+            },
+            vesak: {
+                title: 'Hari Wesak',
+                content: `<p><strong>Tujuan Sambutan:</strong> Mengingati Tokoh Agama</p><p class="mt-2">Disambut oleh penganut agama Buddha bagi memperingati tiga peristiwa penting dalam hidup Siddharta Gautama Buddha: kelahiran, pencapaian kesedaran agung, dan kemangkatannya.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Mengunjungi kuil untuk bersembahyang dan mendengar ceramah.</li><li>Memberi sedekah kepada sami dan golongan miskin.</li><li>Melepaskan burung atau haiwan lain sebagai simbol kebebasan.</li><li>Menyalakan pelita dan lilin berbentuk bunga teratai.</li><li>Mengambil bahagian dalam perarakan kereta berhias.</li></ul>`
+            },
+            vaisakhi: {
+                title: 'Vaisakhi',
+                content: `<p><strong>Tujuan Sambutan:</strong> Tahun Baharu & Keagamaan Sikh</p><p class="mt-2">Merupakan perayaan terpenting bagi masyarakat Sikh. Ia menandakan hari penubuhan Khalsa (persaudaraan Sikh) dan juga perayaan menuai.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Mengunjungi Gurdwara (rumah ibadat Sikh) untuk bersembahyang.</li><li>Membaca kitab suci Guru Granth Sahib.</li><li>Mengadakan perarakan 'Nagar Kirtan' di jalan raya.</li><li>Menyediakan 'langar' (makanan percuma) kepada semua tanpa mengira agama.</li></ul>`
+            },
+            orangasli: {
+                title: 'Perayaan Orang Asli',
+                content: `<p><strong>Tujuan Sambutan:</strong> Kesyukuran & Adat</p><p class="mt-2">Masyarakat Orang Asli mempunyai pelbagai perayaan mengikut suku kaum masing-masing, seperti Genggulang (suku Jah Hut) dan Jis Pai (suku Semai). Tujuannya adalah untuk berterima kasih kepada semangat dan alam atas hasil tuaian.</p><p class="mt-4"><strong>Cara Sambutan:</strong></p><ul class="list-disc list-inside mt-2 text-gray-700"><li>Diadakan selepas musim menuai hasil hutan atau ladang.</li><li>Menjalankan upacara ritual dan pemujaan semangat.</li><li>Persembahan tarian tradisional seperti Sewang.</li><li>Menikmati kenduri dan juadah tradisional bersama-sama.</li><li>Bergantung kepada adat dan kepercayaan suku kaum tertentu.</li></ul>`
+            }
+        };
+
+        // Modal Logic
+        const modal = document.getElementById('modal');
+        const modalBackdrop = modal;
+        const modalContent = modal.querySelector('.modal-content');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function showModal(perayaanKey) {
+            const data = perayaanData[perayaanKey];
+            if (data) {
+                modalTitle.textContent = data.title;
+                modalBody.innerHTML = data.content;
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                 modal.classList.add('pointer-events-none');
+            }, 300);
+        }
+        
+        modalBackdrop.addEventListener('click', function(event) {
+            if (event.target === modalBackdrop) {
+                closeModal();
+            }
+        });
+
+        // Quiz Data and Logic
+        const quizData = [
+            {
+                question: "Perayaan Vaisakhi disambut oleh masyarakat...",
+                answers: [ "Hindu", "Sikh", "Buddha", "Kristian" ],
+                correct: "Sikh"
+            },
+            {
+                question: "Tarian Sewang sering dikaitkan dengan perayaan masyarakat...",
+                answers: [ "Kadazandusun", "Dayak", "Orang Asli", "Cina" ],
+                correct: "Orang Asli"
+            },
+             {
+                question: "Pada zaman dahulu, apakah cara utama untuk menghantar ucapan perayaan?",
+                answers: [ "Media sosial", "E-mel", "Kad ucapan pos", "Panggilan video" ],
+                correct: "Kad ucapan pos"
+            },
+            {
+                question: "Berapakah bilangan perayaan utama yang diiktiraf sebagai 'Rumah Terbuka Malaysia'?",
+                answers: [ "Empat", "Lima", "Enam", "Tujuh" ],
+                correct: "Enam"
+            }
+        ];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const submitButton = document.getElementById('submit-quiz');
+        const resultsContainer = document.getElementById('quiz-results');
+
+        function buildQuiz() {
+            const output = [];
+            quizData.forEach((currentQuestion, questionNumber) => {
+                const answers = [];
+                for (let i = 0; i < currentQuestion.answers.length; i++) {
+                    answers.push(
+                        `<label class="block mt-2 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
+                            <input type="radio" name="question${questionNumber}" value="${currentQuestion.answers[i]}" class="mr-2">
+                            ${currentQuestion.answers[i]}
+                        </label>`
+                    );
+                }
+                output.push(
+                    `<div class="mb-6">
+                        <div class="font-semibold">${questionNumber + 1}. ${currentQuestion.question}</div>
+                        <div class="mt-2 space-y-1">${answers.join('')}</div>
+                    </div>`
+                );
+            });
+            quizContainer.innerHTML = output.join('');
+        }
+
+        function showResults() {
+            const answerContainers = quizContainer.querySelectorAll('.space-y-1');
+            let numCorrect = 0;
+            
+            // Reset styles
+            quizData.forEach((_, questionNumber) => {
+                answerContainers[questionNumber].parentElement.classList.remove('bg-green-50', 'bg-red-50', 'p-3', 'rounded-lg');
+            });
+
+            quizData.forEach((currentQuestion, questionNumber) => {
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                if (userAnswer === currentQuestion.correct) {
+                    numCorrect++;
+                    answerContainer.parentElement.classList.add('bg-green-50', 'p-3', 'rounded-lg');
+                } else {
+                    answerContainer.parentElement.classList.add('bg-red-50', 'p-3', 'rounded-lg');
+                }
+            });
+
+            resultsContainer.innerHTML = `Anda mendapat ${numCorrect} daripada ${quizData.length} jawapan betul!`;
+            resultsContainer.style.color = numCorrect >= quizData.length / 2 ? 'green' : 'red';
+        }
+
+        buildQuiz();
+        submitButton.addEventListener('click', showResults);
+
+    </script>
+</body>
+</html>
